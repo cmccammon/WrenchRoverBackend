@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  service_name: MyString
+  service_address: MyString
+  service_city: MyString
+  service_state: MyString
+  service_zip: MyString
+  service_phone: MyString
+  service_email: MyString
+  service_bio: MyString
+
+two:
+  service_name: MyString
+  service_address: MyString
+  service_city: MyString
+  service_state: MyString
+  service_zip: MyString
+  service_phone: MyString
+  service_email: MyString
+  service_bio: MyString

@@ -1,0 +1,2 @@
+class ServiceCenter < ApplicationRecord
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  request_auto_data: MyString
+  request_issue: MyString
+  user: one
+
+two:
+  request_auto_data: MyString
+  request_issue: MyString
+  user: two
