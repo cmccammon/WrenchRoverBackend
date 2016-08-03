@@ -7,26 +7,33 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 15.times do
   user = User.new ({
-    name: Faker::Internet.user_name,
-    email: Faker::Internet.safe_email,
-    zip: Faker::Address.zip
+    user_name: Faker::Internet.user_name,
+    user_email: Faker::Internet.safe_email,
+    user_zip: Faker::Address.zip,
+    user_phone: Faker::PhoneNumber.phone_number
     })
+    user.save!
 end
 
 10.times do
-  request = Service_request.new ({
-    issue: Faker::ChuckNorris.fact,
-    auto_data: Faker::Vehicle.manufacture,
+  request = ServiceRequest.new ({
+    request_issue: Faker::ChuckNorris.fact,
+    request_auto_data: Faker::Vehicle.manufacture,
     user_id: rand(1..14)
     })
+    request.save!
 end
 
 15.times do
-  service = Service_centers.new ({
-    name: Faker::Company.name,
-    address:Faker::Address.street_address,
-    email: Faker::Internet.safe_email,
-    phone: Faker::PhoneNumber.phone_number,
-    bio: Faker::StarWars.quote
+  service = ServiceCenter.new ({
+    service_name: Faker::Company.name,
+    service_address: Faker::Address.street_address,
+    service_city: Faker::Address.city,
+    service_state: Faker::Address.state,
+    service_zip: Faker::Address.zip,
+    service_email: Faker::Internet.safe_email,
+    service_phone: Faker::PhoneNumber.phone_number,
+    service_bio: Faker::StarWars.quote
     })
+    service.save!
 end
