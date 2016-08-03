@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:create, :show, :update, :destroy]
+  before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
   def index
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  
+
   # DELETE /users/1
   def destroy
     @user.destroy
