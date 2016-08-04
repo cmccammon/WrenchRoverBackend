@@ -7,11 +7,11 @@ So this is a basic Rails API.  I have used the rails new --api switch and used g
  get request
  /users
 
-#get a single user
+#Get a single user
 get request
 /users/id
 
-#add a user
+#Add a user
 post request
 /users
   json format:
@@ -22,11 +22,11 @@ post request
      "user_zip": "95556"
    }
   }
-#remove a user(not currently doing)
+#Remove a user(not currently doing)
   delete request
   /users/id
 
-#update a user
+#Update a user
 put request
 /users/id
 json format:
