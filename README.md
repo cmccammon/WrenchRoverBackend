@@ -41,11 +41,11 @@ json format:
 ```
 #Same format for all other listed end points.
 #Service Center
-get, post
-/service_centers
-get, put
-/service_centers/id
-json format:
+get, post  
+/service_centers  
+get, put  
+/service_centers/id  
+json format:  
 ```json
 {
  "service_center": {
@@ -61,11 +61,11 @@ json format:
 }
 ```
 #Service Requests
-get, post
-/service_requests
-get, put
-/service_requests/id
-json format:
+get, post   
+/service_requests  
+get, put  
+/service_requests/id  
+json format:  
 ```json
 {
   "service_request": {
