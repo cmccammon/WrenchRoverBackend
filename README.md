@@ -14,6 +14,7 @@ get request
 post request
 /users
   json format:
+```json
   {
    "user": {
      "user_name": "Chris",
@@ -21,6 +22,7 @@ post request
      "user_zip": "95556"
    }
   }
+  ```
 #Remove a user(not currently doing)
   delete request
   /users/id
@@ -28,6 +30,7 @@ post request
 put request
 /users/id
 json format:
+```json
 {
  "user": {
    "user_name": "Chris",
@@ -35,6 +38,7 @@ json format:
    "user_zip": "95556"
  }
 }
+```
 #Same format for all other listed end points.
 #Service Center
 get, post
@@ -42,6 +46,7 @@ get, post
 get, put
 /service_centers/id
 json format:
+```json
 {
  "service_center": {
     "service_name": "Shady tree",
@@ -54,20 +59,22 @@ json format:
     "service_bio": "Why he do that?"
  }
 }
+```
 #Service Requests
 get, post
 /service_requests
 get, put
 /service_requests/id
 json format:
+```json
 {
   "service_request": {
-    "request_auto_data": "[Jeep, cherokee, limited, 4.0l 3A]"
-    "request_issue": "Insert amazing text here about the issue"
+    "request_auto_data": "[Jeep, cherokee, limited, 4.0l 3A]",
+    "request_issue": "Insert amazing text here about the issue",
     "user_id": "put the user ID from current user session"    
   }
 }
-
+```
 
 #pushed to heroku
 https://wrenchroverapi.herokuapp.com/
