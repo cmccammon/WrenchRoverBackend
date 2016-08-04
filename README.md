@@ -4,15 +4,15 @@ So this is a basic Rails API.  I have used the rails new --api switch and used g
 
 https://wrenchroverapi.herokuapp.com/
 
-#Get all users
- get request
- /users
-#Get a single user
-get request
-/users/id
-#Add a user
-post request
+#All users  
+get request  
 /users
+#Get a single user  
+get request  
+/users/id
+#Add a user  
+post request  
+/users  
   json format:
 ```json
   {
@@ -23,12 +23,12 @@ post request
    }
   }
   ```
-#Remove a user(not currently doing)
-  delete request
+#Remove a user(not currently doing)  
+  delete request  
   /users/id
-#Update a user
-put request
-/users/id
+#Update a user  
+put request  
+/users/id  
 json format:
 ```json
 {
@@ -40,7 +40,7 @@ json format:
 }
 ```
 #Same format for all other listed end points.
-#Service Center
+#Service Center  
 get, post  
 /service_centers  
 get, put  
@@ -60,7 +60,7 @@ json format:
  }
 }
 ```
-#Service Requests
+#Service Requests  
 get, post   
 /service_requests  
 get, put  
@@ -76,7 +76,7 @@ json format:
 }
 ```
 
-#pushed to heroku
+#pushed to heroku  
 https://wrenchroverapi.herokuapp.com/
 
 initial 8/4/16
