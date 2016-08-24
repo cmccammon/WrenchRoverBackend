@@ -2,8 +2,8 @@
 class WelcomeMailerPreview < ActionMailer::Preview
 
   def welcome_mailer_preview
-    WelcomeMailer.welcome_email(User.last)
+    WelcomeMailer.welcome_email(User.first)
   end
 
-  
+
 end
