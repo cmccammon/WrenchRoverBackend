@@ -13,11 +13,17 @@ class ServiceRequestsController < ApplicationController
     render json: @service_request
   end
 
+  def auto
+  #  @autos = ServiceRequest.find(request_auto_data.where(user_id:[params]))
+
+  end
+
   # POST /service_requests
   def create
     @service_request = ServiceRequest.new(service_request_params)
 
     if @service_request.save
+      #ServiceQuotesController.create(service_quote_params)
       render json: @service_request, status: :created, location: @service_request
     else
       render json: @service_request.errors, status: :unprocessable_entity
