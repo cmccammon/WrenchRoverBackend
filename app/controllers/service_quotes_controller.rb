@@ -46,6 +46,6 @@ class ServiceQuotesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def service_quote_params
-      params.require(:service_quote).permit(:quote_request_data, :request_issue, :service_center_id)
+      params.require(:service_quote).permit(:quote_request_data, :request_issue, :service_center_id, :quote_text, :quote_cost)
     end
 end
