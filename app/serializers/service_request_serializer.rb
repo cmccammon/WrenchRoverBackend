@@ -1,3 +1,6 @@
 class ServiceRequestSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id,
+             :request_auto_data,
+             :request_issue,
+             :user_id
 end
