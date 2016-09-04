@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160904174433) do
   create_table "service_centers", force: :cascade do |t|
     t.string   "service_name"
     t.string   "service_address"
+    t.string   "service_address_second"
     t.string   "service_city"
     t.string   "service_state"
     t.string   "service_zip"
@@ -34,7 +35,7 @@ ActiveRecord::Schema.define(version: 20160904174433) do
     t.string   "service_bio"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.string   "service_address_second"
+
   end
 
   create_table "service_quotes", force: :cascade do |t|
@@ -70,9 +71,10 @@ ActiveRecord::Schema.define(version: 20160904174433) do
     t.string   "user_email"
     t.string   "user_zip"
     t.string   "user_phone"
+    t.integer  "auto_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "auto_id"
+
   end
 
   add_foreign_key "service_calendars", "users"
