@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   resources :service_calendars
   resources :user_calendars
   resources :service_quotes
