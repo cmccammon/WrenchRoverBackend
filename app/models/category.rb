@@ -5,5 +5,4 @@ class Category < ApplicationRecord
 
 
 
-
 end

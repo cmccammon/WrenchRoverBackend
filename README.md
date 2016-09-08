@@ -69,7 +69,7 @@ json format:
 ```json
 {
   "service_request": {
-    "request_auto_data": "[Jeep, cherokee, limited, 4.0l 3A]",
+    "request_auto_data": "[2012, jeep, Commander, 4.0l 5A]",
     "request_issue": "Insert amazing text here about the issue",
     "user_id": "put the user ID from current user session"    
   }
@@ -79,4 +79,5 @@ json format:
 #pushed to heroku  
 https://wrenchroverapi.herokuapp.com/
 
-initial 8/4/16
+initial 8/4/16,
+update 9/4/16
