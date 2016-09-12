@@ -4,16 +4,10 @@ class CategoriesController < ApplicationController
   # GET /categories
   def index
 
-    @categories = Category.all
+    @categories = Category.second
 
     render json: @categories
 
-  end
-
-  def first
-
-    # @categories = Category.where(parent_id: nil)
-    #               Category.find(10).children.all
   end
 
   # GET /categories/1
