@@ -22,6 +22,8 @@ class ServiceRequestsController < ApplicationController
     @service_request = ServiceRequest.new(service_request_params)
 
     if @service_request.save
+      #send Email
+
       render json: @service_request, status: :created, location: @service_request
     else
       render json: @service_request.errors, status: :unprocessable_entity
