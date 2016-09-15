@@ -3,4 +3,6 @@ class ServiceRequestSerializer < ActiveModel::Serializer
              :request_auto_data,
              :request_issue,
              :user_id
+
+  has_one :user
 end

@@ -5,4 +5,6 @@ class ServiceQuoteSerializer < ActiveModel::Serializer
               :service_center_id,
               :quote_text,
               :quote_cost
+
+  has_one :service_center
 end
