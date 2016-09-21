@@ -9,4 +9,5 @@ class Category < ApplicationRecord
       arr << { label: model.name, children: collection_to_json(model.children) }
     end
   end
+  
 end
