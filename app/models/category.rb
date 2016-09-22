@@ -6,7 +6,7 @@ class Category < ApplicationRecord
 
   def self.collection_to_json(collection = roots)
     collection.inject([]) do |arr, model|
-      arr << { label: model.name, desc: model.desc, info: model.info_link, parent: model.parent_id, children: collection_to_json(model.children) }
+      arr << { label: model.name, desc: model.desc, info: model.info_link, children: collection_to_json(model.children) }
     end
   end
 
