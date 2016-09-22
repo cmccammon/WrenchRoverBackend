@@ -75,9 +75,16 @@ json format:
   }
 }
 ```
+#List Categories and their children
+get
+/categories
+
 
 #pushed to heroku  
 https://wrenchroverapi.herokuapp.com/
 
 initial 8/4/16,
-update 9/4/16
+
+update 9/4/16,
+
+update 9/22/16
