@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 20160922160110) do
   end
 
   create_table "service_quotes", force: :cascade do |t|
-    t.string   "quote_request_data"
-    t.string   "request_issue"
+    t.string   "quote_request_data" #replace with service_requests_id
+    t.string   "request_issue"      #replace with service_requests_id
     t.integer  "service_center_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
