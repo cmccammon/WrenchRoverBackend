@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922160110) do
+ActiveRecord::Schema.define(version: 20160926180630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160922160110) do
     t.string   "desc"
     t.string   "info_link"
     t.string   "icon_link"
+    t.string   "label"
   end
 
   create_table "service_calendars", force: :cascade do |t|
@@ -52,8 +53,8 @@ ActiveRecord::Schema.define(version: 20160922160110) do
   end
 
   create_table "service_quotes", force: :cascade do |t|
-    t.string   "quote_request_data" #replace with service_requests_id
-    t.string   "request_issue"      #replace with service_requests_id
+    t.string   "quote_request_data"
+    t.string   "request_issue"
     t.integer  "service_center_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
