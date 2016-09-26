@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :autos
   resources :categories
   resources :service_calendars
   resources :user_calendars
