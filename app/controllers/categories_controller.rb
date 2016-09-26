@@ -48,6 +48,6 @@ class CategoriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def category_params
-      params.require(:category).permit(:name, :parent_id, :desc, :info_link)
+      params.require(:category).permit(:name, :label, :parent_id, :desc, :info_link)
     end
 end
