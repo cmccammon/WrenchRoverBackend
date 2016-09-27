@@ -1,16 +1,24 @@
-## WrenchRover-API
+# WrenchRover-API
+Rails V 5.0  
+Ruby V 2.3.0
 
-So this is a basic Rails API.  I have used the rails new --api switch and used g scaffold for all controllers and models.
+So this is a Rails app running only API calls.  I have used the rails new --api switch to generate the framework. Most of the nesting is accomplished with Active Model Serializer, however I needed to use 'awesome nested set' for the recursive search in the categories endpoint.
+
+## Some important Gems:
+Figaro  
+awesome nested set  
+Active Model Serializer  
+rack-cors  
 
 https://wrenchroverapi.herokuapp.com/
 
-#All users  
+# All users  
 get request  
 /users
-#Get a single user  
+# Get a single user  
 get request  
 /users/id
-#Add a user  
+# Add a user  
 post request  
 /users  
   json format:
@@ -24,10 +32,10 @@ json
    }
   }
   ```
-#Remove a user(not currently doing)  
+# Remove a user(not currently doing)  
   delete request  
   /users/id
-#Update a user  
+# Update a user  
 put request  
 /users/id  
 json format:
@@ -41,8 +49,8 @@ json
  }
 }
 ```
-#Same format for all other listed end points.
-#Service Center  
+## Same format for all other listed end points.
+# Service Center  
 get, post  
 /service_centers  
 get, put  
@@ -63,7 +71,7 @@ json
  }
 }
 ```
-#Service Requests  
+# Service Requests  
 get, post   
 /service_requests  
 get, put  
@@ -79,11 +87,11 @@ json
   }
 }
 ```
-#List Categories and their children
-get
+## List Categories and their children
+get  
 /categories
 
-#Auto data
+# Auto data
 /autos
 /autos/id
 json format:  
@@ -103,7 +111,7 @@ json
 ```
 
 
-#pushed to heroku  
+# pushed to heroku  
 https://wrenchroverapi.herokuapp.com/
 
 initial 8/4/16,
