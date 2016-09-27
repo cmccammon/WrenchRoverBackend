@@ -10,7 +10,7 @@ awesome nested set
 Active Model Serializer  
 rack-cors  
 
-https://wrenchroverapi.herokuapp.com/
+
 
 # All users  
 get request  
