@@ -1,4 +1,4 @@
-# WrenchRover-API
+## WrenchRover-API
 
 So this is a basic Rails API.  I have used the rails new --api switch and used g scaffold for all controllers and models.
 
@@ -14,7 +14,8 @@ get request
 post request  
 /users  
   json format:
-```json
+```
+json
   {
    "user": {
      "user_name": "Chris",
@@ -30,7 +31,8 @@ post request
 put request  
 /users/id  
 json format:
-```json
+```
+json
 {
  "user": {
    "user_name": "Chris",
@@ -46,7 +48,8 @@ get, post
 get, put  
 /service_centers/id  
 json format:  
-```json
+```
+json
 {
  "service_center": {
     "service_name": "Shady tree",
@@ -66,18 +69,38 @@ get, post
 get, put  
 /service_requests/id  
 json format:  
-```json
+```
+json
 {
   "service_request": {
     "request_auto_data": "[2012, jeep, Commander, 4.0l 5A]",
     "request_issue": "Insert amazing text here about the issue",
-    "user_id": "put the user ID from current user session"    
+    "user_id": 12
   }
 }
 ```
 #List Categories and their children
 get
 /categories
+
+#Auto data
+/autos
+/autos/id
+json format:  
+```
+json
+{
+  "service_request": {
+      "year": 1999,
+      "make": "Ford",
+      "model": "Escort",
+      "trim": "xl",
+      "engine": "3.6l v6",
+      "mileage": 120,
+      "user_id": 16
+    }
+}
+```
 
 
 #pushed to heroku  
@@ -87,4 +110,6 @@ initial 8/4/16,
 
 update 9/4/16,
 
-update 9/22/16
+update 9/22/16,
+
+update 9/26/16
