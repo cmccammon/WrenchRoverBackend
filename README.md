@@ -87,7 +87,26 @@ json
   }
 }
 ```
-## List Categories and their children
+# Service Quotes  
+get, post   
+/service_quotes  
+get, put  
+/service_quotes/id  
+json format:  
+```
+json
+{
+ "service_quote": {
+   "quote_request_data": "John",
+   "request_issue": "Drives wonky",
+   "service_center_id": 3,
+   "quote_text": "please thank you",
+   "quote_cost": 250
+ }
+}
+```
+# Categories  
+## and their children
 get  
 /categories
 
