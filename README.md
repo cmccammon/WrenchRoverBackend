@@ -106,7 +106,8 @@ json
 }
 ```
 # Categories  
-## and their children
+and their children  
+
 get  
 /categories
 
@@ -133,10 +134,8 @@ json
 # pushed to heroku  
 https://wrenchroverapi.herokuapp.com/
 
-initial 8/4/16,
-
-update 9/4/16,
-
-update 9/22/16,
-
-update 9/26/16
+initial 8/4/16,  
+update 9/4/16,  
+update 9/22/16,  
+update 9/26/16,  
+update 9/28/16
