@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160926203807) do
+ActiveRecord::Schema.define(version: 20160929220502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,9 +90,10 @@ ActiveRecord::Schema.define(version: 20160926203807) do
     t.string   "user_email"
     t.string   "user_zip"
     t.string   "user_phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "auto_id"
+    t.string   "password_digest"
   end
 
   add_foreign_key "autos", "users"
