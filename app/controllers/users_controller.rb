@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_request, only: [:create]
+
 
   # GET /users
   def index
@@ -17,8 +19,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      #send Email
-      WelcomeMailer.welcome_email(@user).deliver
+      #send Email disabled for dev.
+      #WelcomeMailer.welcome_email(@user).deliver
       render json: @user, status: :created, location: @user
     else
       render json: @user.errors, status: :unprocessable_entity
@@ -51,6 +53,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:user_name, :user_email, :password_digest, :user_zip, :user_phone, :auto_id)
+      params.require(:user).permit(:user_name, :user_email, :password, :user_zip, :user_phone, :auto_id)
     end
 end
