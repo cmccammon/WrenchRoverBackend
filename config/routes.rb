@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :service_requests
   resources :service_centers
   resources :users
-
+  get  'service_quotes/sort/:id', to: 'service_quotes#sort'
   post 'authenticate', to: 'authentication#authenticate'
   # get    '/categories/list'     => 'categories#list'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

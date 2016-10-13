@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929220502) do
+ActiveRecord::Schema.define(version: 20161012232715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20160929220502) do
     t.datetime "updated_at",         null: false
     t.string   "quote_text"
     t.decimal  "quote_cost"
+    t.integer  "user_id"
     t.index ["service_center_id"], name: "index_service_quotes_on_service_center_id", using: :btree
   end
 
