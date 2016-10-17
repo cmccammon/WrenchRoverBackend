@@ -8,7 +8,9 @@ So this is a Rails app running only API calls.  I have used the rails new --api 
 Figaro  
 awesome nested set  
 Active Model Serializer  
-rack-cors  
+rack-cors
+JWT
+simple_command
 
 
 
@@ -23,12 +25,14 @@ post request
 /users  
   json format:
 ```
-json
   {
    "user": {
      "user_name": "Chris",
      "user_email": "chris@example.net",
-     "user_zip": "95556"
+     "user_zip": "95556",
+     "user_phone": "425-749-1082",
+     "auto_id": 3,
+     "password": "string"     
    }
   }
   ```
@@ -40,7 +44,6 @@ put request
 /users/id  
 json format:
 ```
-json
 {
  "user": {
    "user_name": "Chris",
@@ -57,7 +60,6 @@ get, put
 /service_centers/id  
 json format:  
 ```
-json
 {
  "service_center": {
     "service_name": "Shady tree",
@@ -78,7 +80,6 @@ get, put
 /service_requests/id  
 json format:  
 ```
-json
 {
   "service_request": {
     "request_auto_data": "[2012, jeep, Commander, 4.0l 5A]",
@@ -94,7 +95,6 @@ get, put
 /service_quotes/id  
 json format:  
 ```
-json
 {
  "service_quote": {
    "quote_request_data": "John",
@@ -116,7 +116,6 @@ get
 /autos/id
 json format:  
 ```
-json
 {
   "service_request": {
       "year": 1999,
@@ -128,8 +127,26 @@ json
       "user_id": 16
     }
 }
-```
+```  
+# User sign in Authentication  
 
+/authenticate  
+
+POST request,   
+JSON format:  
+```
+{
+	"user_email": "test@example.net",
+	"password": "theappleis"
+}
+```  
+JSON response:  
+```
+{
+    "auth_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMSwiZXhwIjoxNDc2Mzk2NjAyfQ.0u4Akcg6cHqW0cLf88E2kXGl_-CaxUlZGwqIsYPv3wM"
+}
+```  
+### Pass Token via header, in 'Authorization' field.  
 
 # pushed to heroku  
 https://wrenchroverapi.herokuapp.com/
