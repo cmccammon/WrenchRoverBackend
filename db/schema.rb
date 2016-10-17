@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161012232715) do
+ActiveRecord::Schema.define(version: 20161017215256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,8 +66,8 @@ ActiveRecord::Schema.define(version: 20161012232715) do
   end
 
   create_table "service_quotes", force: :cascade do |t|
-    t.string   "quote_request_data"
-    t.string   "request_issue"
+    t.string   "service_request_id"
+    t.string   "auto_id"
     t.integer  "service_center_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -78,11 +78,11 @@ ActiveRecord::Schema.define(version: 20161012232715) do
   end
 
   create_table "service_requests", force: :cascade do |t|
-    t.string   "request_auto_data"
-    t.string   "request_issue"
+    t.string   "auto_id"
+    t.string   "work_request"
     t.integer  "user_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["user_id"], name: "index_service_requests_on_user_id", using: :btree
   end
 

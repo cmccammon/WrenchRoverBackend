@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::Serialization
-  before_action :authenticate_request
+  #before_action :authenticate_request
 
   attr_reader :current_user
 
