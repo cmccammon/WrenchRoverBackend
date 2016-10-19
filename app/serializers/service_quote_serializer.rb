@@ -1,10 +1,12 @@
 class ServiceQuoteSerializer < ActiveModel::Serializer
   attributes :id,
-              :quote_request_data,
-              :request_issue,
+              :user_id,
+              :auto_id,
+              :service_request_id,
               :service_center_id,
               :quote_text,
               :quote_cost
 
   has_one :service_center
+
 end

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::Serialization
+  #Authenticate disabled for dev.
   #before_action :authenticate_request
 
   attr_reader :current_user

@@ -8,15 +8,7 @@
 
                 # var = Category.create!(:name => 'Name')
                 # name.move_to_child_of(parent)
-
-
-
-
-
-
-
-
-
+#
 # 15.times do
 #   user = User.new ({
 #     user_name: Faker::Internet.user_name,

@@ -8,4 +8,6 @@ class UserSerializer < ActiveModel::Serializer
               :created_at
 
   has_many :autos
+  has_many :service_requests
+  has_many :service_quotes
 end
