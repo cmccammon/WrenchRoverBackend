@@ -48,7 +48,8 @@ json format:
  "user": {
    "user_name": "Chris",
    "user_email": "chris@example.net",
-   "user_zip": "95556"
+   "user_zip": "95556",
+   "password": "kudnfivnfunv"
  }
 }
 ```
@@ -82,9 +83,9 @@ json format:
 ```
 {
   "service_request": {
-    "request_auto_data": "[2012, jeep, Commander, 4.0l 5A]",
-    "request_issue": "Insert amazing text here about the issue",
-    "user_id": 12
+    "user_id": 1,
+		"auto_id": 2,
+		"work_request": "Work to be performed"
   }
 }
 ```
@@ -97,11 +98,12 @@ json format:
 ```
 {
  "service_quote": {
-   "quote_request_data": "John",
-   "request_issue": "Drives wonky",
-   "service_center_id": 3,
-   "quote_text": "please thank you",
-   "quote_cost": 250
+   "user_id": 2,
+   "auto_id": 2,
+   "service_center_id": 7,
+   "service_request_id": 2,
+   "quote_text": "Openings today or Thursday",
+   "quote_cost": 200
  }
 }
 ```
@@ -117,7 +119,7 @@ get
 json format:  
 ```
 {
-  "service_request": {
+  "auto": {
       "year": 1999,
       "make": "Ford",
       "model": "Escort",
