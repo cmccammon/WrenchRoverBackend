@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161017215256) do
+ActiveRecord::Schema.define(version: 20161021203542) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,9 @@ ActiveRecord::Schema.define(version: 20161017215256) do
     t.string   "engine"
     t.integer  "mileage"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "service_request_id"
     t.index ["user_id"], name: "index_autos_on_user_id", using: :btree
   end
 
@@ -66,19 +67,16 @@ ActiveRecord::Schema.define(version: 20161017215256) do
   end
 
   create_table "service_quotes", force: :cascade do |t|
-    t.string   "service_request_id"
-    t.string   "auto_id"
     t.integer  "service_center_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "quote_text"
     t.decimal  "quote_cost"
-    t.integer  "user_id"
+    t.string   "service_request_id"
     t.index ["service_center_id"], name: "index_service_quotes_on_service_center_id", using: :btree
   end
 
   create_table "service_requests", force: :cascade do |t|
-    t.string   "auto_id"
     t.string   "work_request"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
@@ -93,7 +91,6 @@ ActiveRecord::Schema.define(version: 20161017215256) do
     t.string   "user_phone"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "auto_id"
     t.string   "password_digest"
   end
 

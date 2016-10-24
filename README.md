@@ -31,7 +31,7 @@ post request
      "user_email": "chris@example.net",
      "user_zip": "95556",
      "user_phone": "425-749-1082",
-     "auto_id": 3,
+     
      "password": "string"     
    }
   }

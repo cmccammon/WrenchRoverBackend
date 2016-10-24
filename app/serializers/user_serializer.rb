@@ -4,7 +4,7 @@ class UserSerializer < ActiveModel::Serializer
               :user_email,
               :user_zip,
               :user_phone,
-              :auto_id,
+              
               :created_at
 
   has_many :autos

@@ -9,4 +9,6 @@ class ServiceCenterSerializer < ActiveModel::Serializer
               :service_phone,
               :service_email,
               :service_bio
+
+has_many :service_quotes
 end
