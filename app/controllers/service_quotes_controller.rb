@@ -9,7 +9,7 @@ class ServiceQuotesController < ApplicationController
   end
 
   def accepted
-    @accepted_quotes = ServiceQuote.find(params[:user_id]).where(:accepted = 'true')
+    @accepted_quotes
     render json: @accepted_quotes
   end
   # GET /service_quotes/1
@@ -50,6 +50,6 @@ class ServiceQuotesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def service_quote_params
-      params.require(:service_quote).permit(:user_id, :service_request_id, :service_center_id, :quote_text, :quote_cost)
+      params.require(:service_quote).permit(:user_id, :service_request_id, :service_center_id, :quote_text, :quote_cost, :accepted)
     end
 end

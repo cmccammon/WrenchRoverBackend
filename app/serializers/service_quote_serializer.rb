@@ -5,7 +5,9 @@ class ServiceQuoteSerializer < ActiveModel::Serializer
               :service_request_id,
               :service_center_id,
               :quote_text,
-              :quote_cost
+              :quote_cost,
+              :accepted,
+              :updated_at
 
   belongs_to :service_center
   belongs_to :service_request
