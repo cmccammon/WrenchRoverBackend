@@ -3,6 +3,8 @@ class ServiceRequestSerializer < ActiveModel::Serializer
              :work_request,
              :user_id
 
-  has_one :user
+  belongs_to :user
 
+  has_one :auto
+  has_many :service_quotes
 end
