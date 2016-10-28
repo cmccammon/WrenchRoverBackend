@@ -30,8 +30,7 @@ post request
      "user_name": "Chris",
      "user_email": "chris@example.net",
      "user_zip": "95556",
-     "user_phone": "425-749-1082",
-     
+     "user_phone": "425-749-1082",     
      "password": "string"     
    }
   }
@@ -46,10 +45,9 @@ json format:
 ```
 {
  "user": {
-   "user_name": "Chris",
-   "user_email": "chris@example.net",
-   "user_zip": "95556",
-   "password": "kudnfivnfunv"
+
+   "user_zip": "95556"
+
  }
 }
 ```
@@ -84,7 +82,6 @@ json format:
 {
   "service_request": {
     "user_id": 1,
-		"auto_id": 2,
 		"work_request": "Work to be performed"
   }
 }
@@ -99,7 +96,6 @@ json format:
 {
  "service_quote": {
    "user_id": 2,
-   "auto_id": 2,
    "service_center_id": 7,
    "service_request_id": 2,
    "quote_text": "Openings today or Thursday",
@@ -126,7 +122,8 @@ json format:
       "trim": "xl",
       "engine": "3.6l v6",
       "mileage": 120,
-      "user_id": 16
+      "user_id": 16,
+      "service_request_id": 19
     }
 }
 ```  
@@ -157,4 +154,6 @@ initial 8/4/16,
 update 9/4/16,  
 update 9/22/16,  
 update 9/26/16,  
-update 9/28/16
+update 9/28/16,
+update 10/4/16,
+update 10/28/16

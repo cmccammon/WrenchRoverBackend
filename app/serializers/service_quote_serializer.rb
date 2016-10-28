@@ -1,7 +1,5 @@
 class ServiceQuoteSerializer < ActiveModel::Serializer
-  attributes :id,
-
-
+  attributes  :id,
               :service_request_id,
               :service_center_id,
               :quote_text,
