@@ -5,7 +5,6 @@ class CategoriesController < ApplicationController
   def index
 
     @categories = Category.all
-        # @item.children.except(:order).order("parent_id")
     render json: @categories.collection_to_json
 
   end

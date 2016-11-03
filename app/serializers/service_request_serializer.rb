@@ -2,7 +2,8 @@ class ServiceRequestSerializer < ActiveModel::Serializer
   attributes :id,
              :work_request,
              :user_id,
-             :created_at
+             :created_at,
+             :selected_date
 
   belongs_to :user
 

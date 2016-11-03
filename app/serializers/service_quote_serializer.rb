@@ -5,6 +5,7 @@ class ServiceQuoteSerializer < ActiveModel::Serializer
               :quote_text,
               :quote_cost,
               :accepted,
+              :availible_dates,
               :updated_at,
               :created_at
 
