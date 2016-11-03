@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161027012940) do
+ActiveRecord::Schema.define(version: 20161103000330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20161027012940) do
     t.decimal  "quote_cost"
     t.integer  "service_request_id"
     t.string   "accepted"
+    t.string   "availible_dates"
     t.index ["service_center_id"], name: "index_service_quotes_on_service_center_id", using: :btree
     t.index ["service_request_id"], name: "index_service_quotes_on_service_request_id", using: :btree
   end
@@ -82,8 +83,9 @@ ActiveRecord::Schema.define(version: 20161027012940) do
   create_table "service_requests", force: :cascade do |t|
     t.string   "work_request"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "selected_date"
     t.index ["user_id"], name: "index_service_requests_on_user_id", using: :btree
   end
 
