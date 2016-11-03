@@ -15,10 +15,6 @@ class ServiceRequestsController < ApplicationController
     render json: @service_request
   end
 
-  def auto
-  #  @autos = ServiceRequest.request_auto_data.find(params[:user_id])
-  end
-
   # POST /service_requests
   def create
     @service_request = ServiceRequest.new(service_request_params)
@@ -54,6 +50,6 @@ class ServiceRequestsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def service_request_params
-      params.require(:service_request).permit(:work_request, :user_id)
+      params.require(:service_request).permit(:work_request, :user_id, :selected_date)
     end
 end
