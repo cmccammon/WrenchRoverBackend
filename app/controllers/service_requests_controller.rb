@@ -4,11 +4,17 @@ class ServiceRequestsController < ApplicationController
   # GET /service_requests
   # Only returns items for a specific user.
   def index
+    @service_requests = ServiceRequest.all
+    render json: @service_requests
+  end
+
+  def userid
     @service_requests = ServiceRequest.where(user_id: request.headers["HTTP_USER_ID"])
 
 
     render json: @service_requests
   end
+
 
   # GET /service_requests/1
   def show

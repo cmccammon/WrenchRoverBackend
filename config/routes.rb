@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :service_requests
   resources :service_centers
   resources :users
-  get  'accepted_quotes/:id', to: 'service_quotes#accepted'
+
+  get  'service_requests_profile', to: 'service_requests#userid'
+  # get 'profile', to: :show, controller: 'users'
   post 'authenticate', to: 'authentication#authenticate'
   # get    '/categories/list'     => 'categories#list'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
