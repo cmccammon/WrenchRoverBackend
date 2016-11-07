@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if @user.save
 
       #send Email disabled for dev.
-      #WelcomeMailer.welcome_email(@user).deliver
+      WelcomeMailer.welcome_email(@user).deliver
       render json: @user, status: :created, location: @user
     else
       render json: @user.errors, status: :unprocessable_entity
