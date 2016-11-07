@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
+  prepend SimpleCommand
   before_action :set_user, only: [:show, :update, :destroy]
-  #Skip before disabled for dev
   skip_before_action :authenticate_request, only: [:create]
 
 
@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+
       #send Email disabled for dev.
       #WelcomeMailer.welcome_email(@user).deliver
       render json: @user, status: :created, location: @user
