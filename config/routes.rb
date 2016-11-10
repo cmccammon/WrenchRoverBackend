@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :service_centers
   resources :users
 
-  get  'service_requests_profile', to: 'service_requests#userid'
+  get  'service_requests_profile/:id', to: 'service_requests#userid'
 
   post 'authenticate', to: 'authentication#authenticate'
 

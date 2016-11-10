@@ -8,11 +8,11 @@ class ServiceRequestsController < ApplicationController
     render json: @service_requests
   end
 
+  #GET /service_requests_profile/1
   def userid
-    @service_requests = ServiceRequest.where(user_id: request.headers["HTTP_USER_ID"])
+    @service_requests_profile = ServiceRequest.where(user_id: params[:id])
 
-
-    render json: @service_requests
+    render json: @service_requests_profile
   end
 
 
