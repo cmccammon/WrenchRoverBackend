@@ -6,7 +6,8 @@ class UserSerializer < ActiveModel::Serializer
               :user_zip,
               :user_phone,
               :created_at,
-              :updated_at
+              :updated_at,
+              :email_confirmation
 
   has_many :autos
   has_many :service_requests

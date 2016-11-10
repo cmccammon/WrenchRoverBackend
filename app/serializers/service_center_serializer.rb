@@ -11,5 +11,6 @@ class ServiceCenterSerializer < ActiveModel::Serializer
               :service_bio,
               :user_id
 
+belongs_to :user
 has_many :service_quotes
 end
