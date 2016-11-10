@@ -46,6 +46,8 @@ class ServiceCentersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def service_center_params
-      params.require(:service_center).permit(:service_name, :service_address, :service_address_second, :service_city, :service_state, :service_zip, :service_phone, :service_email, :service_bio)
+      params.require(:service_center).permit(:service_name, :service_address,
+      :service_address_second, :service_city, :service_state, :service_zip,
+      :service_phone, :service_email, :service_bio, :user_id)
     end
 end

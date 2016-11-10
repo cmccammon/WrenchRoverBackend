@@ -1,4 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
+
   attributes  :id,
               :user_name,
               :user_email,
@@ -9,5 +10,5 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :autos
   has_many :service_requests
-  # has_many :service_quotes
+  has_many :service_centers
 end

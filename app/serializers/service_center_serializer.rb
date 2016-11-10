@@ -8,7 +8,8 @@ class ServiceCenterSerializer < ActiveModel::Serializer
               :service_zip,
               :service_phone,
               :service_email,
-              :service_bio
+              :service_bio,
+              :user_id
 
 has_many :service_quotes
 end
