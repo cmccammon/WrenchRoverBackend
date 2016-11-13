@@ -10,6 +10,8 @@ class UsersController < ApplicationController
     render json: @users
   end
 
+  # .where('user_id IS NOT NULL')
+
 # GET /users/1
   def show
     render json: @user
