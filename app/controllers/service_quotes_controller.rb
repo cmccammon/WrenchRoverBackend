@@ -8,6 +8,12 @@ class ServiceQuotesController < ApplicationController
     render json: @service_quotes
   end
 
+  def quoetesbyscid
+    @service_quotes_by_scid = ServiceQuotes.where(service_center_id: params[:id])
+
+    render json: @service_quotes_by_scid
+  end
+
   def accepted
     @accepted_quotes
     render json: @accepted_quotes

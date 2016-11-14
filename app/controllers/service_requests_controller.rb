@@ -1,10 +1,10 @@
 class ServiceRequestsController < ApplicationController
   before_action :set_service_request, only: [:show, :update, :destroy]
-
+  #trying to reduce the index to just the last 21 days.
   # GET /service_requests
   # Only returns items for a specific user.
   def index
-    @service_requests = ServiceRequest.where("created_at < ?", 7.days.ago)
+    @service_requests = ServiceRequest.where("created_at < ?", 21.days.ago)
     # @serv_quote = service_requests #.where('service_quote IS NOT NULL')
 
     render json: @service_requests
