@@ -4,11 +4,11 @@ class ServiceRequestsController < ApplicationController
   # GET /service_requests
   # Only returns items for a specific user.
   def index
-    @service_requests = ServiceRequest.where("created_at < ?", 21.days.ago)
+    @service_requests = ServiceRequest.where('created_at > ?', 14.days.ago)
     # @serv_quote = service_requests #.where('service_quote IS NOT NULL')
 
     render json: @service_requests
-    #service_quotes.id
+
   end
   # service_requests = ServiceRequest.find(19)
   # @serv_quote = service_requests.service_quotes

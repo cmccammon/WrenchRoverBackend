@@ -5,7 +5,7 @@ class ServiceRequestSerializer < ActiveModel::Serializer
              :created_at,
              :selected_date
 
-  belongs_to :user
+  # belongs_to :user
 
   has_one :auto
   has_many :service_quotes

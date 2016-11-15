@@ -5,11 +5,13 @@ class ServiceQuoteSerializer < ActiveModel::Serializer
               :quote_text,
               :quote_cost,
               :accepted,
-              :availible_dates,
+              :available_date_1,
+              :available_date_2,
+              :available_date_3,
               :updated_at,
               :created_at
 
   belongs_to :service_center
-  belongs_to :service_request
+  # belongs_to :service_request
 
 end
