@@ -2,7 +2,7 @@
 Rails V 5.0  
 Ruby V 2.3.0
 
-So this is a Rails app running only API.  I have used the rails new --api switch to generate the framework. Most of the nesting is accomplished with Active Model Serializer, however I needed to use 'awesome nested set' for the recursive search in the categories endpoint. I am using JWT for token authentication. As the app evolves over the next few moths endpoints will be going away and only the ones we use will remain, including some new ones.
+So this is a Rails app running only API.  I have used the rails new --api switch to generate the framework. Most of the nesting is accomplished with Active Model Serializer, however I needed to use 'awesome nested set' for the recursive search in the categories endpoint. I am using JWT for token authentication. As the app evolves over the next few moths endpoints will be going away and only the ones we use will remain, including some new ones. We are making huge improvements to the controllers to make the endpoints and the frontend more efficient.
 
 ## Some important Gems:
 Figaro  
