@@ -35,7 +35,7 @@ Rails.application.configure do
     :address              => "smtp.zoho.com",
     :port                 => 465,
     :user_name            => ENV['wrench_username'],
-    :password             => ENV['wrench_password']
+    :password             => ENV['wrench_password'],
    :authentication       => "plain",
   :enable_starttls_auto => true
   }
