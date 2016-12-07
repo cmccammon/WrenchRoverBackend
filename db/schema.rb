@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115182740) do
+ActiveRecord::Schema.define(version: 20161207175855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(version: 20161115182740) do
     t.datetime "updated_at",         null: false
     t.string   "password_digest"
     t.string   "email_confirmation"
+    t.index ["user_email"], name: "index_users_on_user_email", unique: true, using: :btree
   end
 
   add_foreign_key "autos", "service_requests"
