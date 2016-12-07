@@ -3,6 +3,6 @@ class ServiceRequest < ApplicationRecord
 
 
   has_one :auto
-  has_many :service_quotes
+  has_many :service_quotes, dependent: :destroy
 
 end
