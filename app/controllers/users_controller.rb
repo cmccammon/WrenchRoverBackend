@@ -19,11 +19,8 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-
     @user = User.new(user_params)
-
     if @user.save
-
       #send Email disabled for dev.
       # WelcomeMailer.welcome_email(@user).deliver
       render json: @user, status: :created, location: @user
