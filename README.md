@@ -148,6 +148,7 @@ JSON response:
 ### Pass Token via header, in 'Authorization' field.  
 
 # pushed to heroku  
+
 https://wrenchroverapi.herokuapp.com/
 
 initial 8/4/16,  
@@ -155,5 +156,7 @@ update 9/4/16,
 update 9/22/16,  
 update 9/26/16,  
 update 9/28/16,
-update 10/4/16,
-update 10/28/16
+update 10/4/16,  
+update 10/28/16,  
+update 12/18/16,  
+update 1/12/17  

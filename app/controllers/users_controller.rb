@@ -10,7 +10,6 @@ class UsersController < ApplicationController
     render json: @users
   end
 
-  # .where('user_id IS NOT NULL')
 
 # GET /users/1
   def show
@@ -21,7 +20,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      #send Email disabled for dev.
+      # send Email disabled for dev.
       # WelcomeMailer.welcome_email(@user).deliver
       render json: @user, status: :created, location: @user
     else
