@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :update, :destroy]
   #used for dev.
-  #skip_before_action :authenticate_request
+  skip_before_action :authenticate_request, only: [:index]
 
 
   # GET /categories
