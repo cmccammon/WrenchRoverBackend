@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   resources :service_quotes
   resources :service_requests
   resources :service_centers
-  resources :users
+  resources :users, only: :create do
+    collection do
+    post 'confirm'
+    end
+  end
 
   get  'service_requests_profile/:id', to: 'service_requests#userid'
 
