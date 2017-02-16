@@ -7,17 +7,14 @@ Rails.application.routes.draw do
   resources :service_quotes
   resources :service_requests
   resources :service_centers
-  resources :users, only: :create do
-    collection do
-    post 'confirm'
-    end
-  end
+  resources :users
+  
 
   post 'passwords/forgot', to: 'passwords#forgot'
   post 'passwords/reset', to: 'passwords#reset'
+  #post 'passwords/update', to: 'passwords#update'
   post 'authenticate', to: 'authentication#authenticate'
 
 
-  # get    '/categories/list'     => 'categories#list'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
