@@ -33,7 +33,7 @@ class User < ApplicationRecord
   private
 
   def generate_token
-    SecureRandom.hex(10)
+    SecureRandom.hex(18)
   end
 
 
