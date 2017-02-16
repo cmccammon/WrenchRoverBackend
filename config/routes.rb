@@ -13,8 +13,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get  'service_requests_profile/:id', to: 'service_requests#userid'
-
+  post 'password/forgot', to: 'password#forgot'
+  post 'password/reset', to: 'password#reset'
   post 'authenticate', to: 'authentication#authenticate'
 
 
