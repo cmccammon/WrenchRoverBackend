@@ -128,8 +128,9 @@ json format:
 }
 ```  
 # User sign in Authentication  
-
+### Pass Token via header, in 'Authorization' field.
 /authenticate  
+
 
 POST request,   
 JSON format:  
@@ -145,7 +146,28 @@ JSON response:
     "auth_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMSwiZXhwIjoxNDc2Mzk2NjAyfQ.0u4Akcg6cHqW0cLf88E2kXGl_-CaxUlZGwqIsYPv3wM"
 }
 ```  
-### Pass Token via header, in 'Authorization' field.  
+# Forgot password:  
+## password change request  
+.../passwords/forgot  
+POST request,   
+JSON format:
+```
+{
+	"user_email": "cm@example.net"
+}
+```
+This generates a token that is sent to the user in an email. This token is also stored in the user profile for authentication. (This token is also returned in json for debugging, but will be removed in production)
+
+## password reset  
+.../passwords/reset   
+POST request,   
+JSON format:
+```
+{
+	"password": "green12345"
+}
+```
+This changes the password in the user account. The only response will be a json return of "status: password changed". If logged out the user will need to log in with new password. If logged in the user will need to sign back in once the auth token has expired.(this is only for times when the user is signed in and forgot their password, all other password changes should be made in the profile in a normal user account update.
 
 # pushed to heroku  
 
@@ -159,4 +181,6 @@ update 9/28/16,
 update 10/4/16,  
 update 10/28/16,  
 update 12/18/16,  
-update 1/12/17  
+update 1/12/17,  
+update 1/30/17,  
+update 2/10/17  
