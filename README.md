@@ -159,7 +159,7 @@ JSON format:
 This generates a token that is sent to the user in an email. This token is also stored in the user profile for authentication. (This token is also returned in json for debugging, but will be removed in production)
 
 ## password reset  
-.../passwords/reset   
+.../passwords/reset?token=97dcd4a2669241cfd49a96d88f478161c6d5   
 POST request,   
 JSON format:
 ```

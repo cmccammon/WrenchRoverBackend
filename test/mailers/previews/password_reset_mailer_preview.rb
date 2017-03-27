@@ -2,7 +2,7 @@
 class PasswordResetMailerPreview < ActionMailer::Preview
 
   def password_reset_mailer_preview
-    PasswordResetMailer.password_reset_email(@user)
+    PasswordResetMailer.password_reset_email(User.last)
   end
 
 end
