@@ -3,10 +3,11 @@ class ServiceRequestSerializer < ActiveModel::Serializer
              :work_request,
              :user_id,
              :created_at,
-             :selected_date
+             :selected_date,
+             :auto_id
 
   # belongs_to :user
 
-  has_one :auto
+  belongs_to :auto
   has_many :service_quotes
 end

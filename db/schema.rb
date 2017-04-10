@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216172234) do
+ActiveRecord::Schema.define(version: 20170410031125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,10 +23,8 @@ ActiveRecord::Schema.define(version: 20170216172234) do
     t.string   "engine"
     t.integer  "mileage"
     t.integer  "user_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "service_request_id"
-    t.index ["service_request_id"], name: "index_autos_on_service_request_id", using: :btree
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_autos_on_user_id", using: :btree
   end
 
@@ -90,6 +88,8 @@ ActiveRecord::Schema.define(version: 20170216172234) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.string   "selected_date"
+    t.integer  "auto_id"
+    t.index ["auto_id"], name: "index_service_requests_on_auto_id", using: :btree
     t.index ["user_id"], name: "index_service_requests_on_user_id", using: :btree
   end
 
@@ -107,11 +107,11 @@ ActiveRecord::Schema.define(version: 20170216172234) do
     t.index ["user_email"], name: "index_users_on_user_email", unique: true, using: :btree
   end
 
-  add_foreign_key "autos", "service_requests"
   add_foreign_key "autos", "users"
   add_foreign_key "service_calendars", "users"
   add_foreign_key "service_centers", "users"
   add_foreign_key "service_quotes", "service_centers"
   add_foreign_key "service_quotes", "service_requests"
+  add_foreign_key "service_requests", "autos"
   add_foreign_key "service_requests", "users"
 end
