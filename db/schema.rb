@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410031125) do
+ActiveRecord::Schema.define(version: 20170427004417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 20170410031125) do
     t.datetime "updated_at",    null: false
     t.string   "selected_date"
     t.integer  "auto_id"
+    t.string   "description"
     t.index ["auto_id"], name: "index_service_requests_on_auto_id", using: :btree
     t.index ["user_id"], name: "index_service_requests_on_user_id", using: :btree
   end

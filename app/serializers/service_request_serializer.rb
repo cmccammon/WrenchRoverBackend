@@ -4,7 +4,8 @@ class ServiceRequestSerializer < ActiveModel::Serializer
              :user_id,
              :created_at,
              :selected_date,
-             :auto_id
+             :auto_id,
+             :description
 
   # belongs_to :user
 

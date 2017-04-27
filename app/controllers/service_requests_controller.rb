@@ -62,6 +62,6 @@ class ServiceRequestsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def service_request_params
-      params.require(:service_request).permit(:work_request, :user_id, :auto_id, :selected_date)
+      params.require(:service_request).permit(:work_request, :user_id, :description, :auto_id, :selected_date)
     end
 end
